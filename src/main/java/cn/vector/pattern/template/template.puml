@@ -1,0 +1,26 @@
+@startuml
+package "cn.vector.pattern.template" {
+
+ class Tea{
+    # brew()
+    # addCondiments()
+    # isCustomerWantsCondiments() = false
+ }
+ class Coffee{
+    # brew()
+    # addCondiments()
+ }
+  abstract class RefreshBeverage{
+    + prepareBeverageTemplate()
+    ..
+    -  boilWater()
+    # {abstract} brew()
+    -  pourInCup()
+    # {abstract} addCondiments()
+    # isCustomerWantsCondiments() = true
+ }
+ RefreshBeverage <|-- Tea
+ RefreshBeverage <|-- Coffee
+}
+
+@enduml
