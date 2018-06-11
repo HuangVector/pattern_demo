@@ -1,0 +1,16 @@
+@startuml
+title 准备阶段
+actor client
+participant 目标对象
+participant 观察者对象
+activate client
+client -> 目标对象 : 1.创建目标对象
+activate 目标对象
+deactivate 目标对象
+client -> 观察者对象 : 2.创建观察者对象
+activate 观察者对象
+deactivate 观察者对象
+client -> 目标对象 : 3.向目标对象注册观察者对象
+activate 目标对象
+deactivate 目标对象
+@enduml

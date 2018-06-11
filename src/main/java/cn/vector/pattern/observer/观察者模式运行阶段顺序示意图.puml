@@ -1,0 +1,16 @@
+@startuml
+title 运行阶段
+actor client
+participant 目标对象
+participant 观察者对象
+activate client
+client -> 目标对象 : 1.改变目标对象的状态
+activate 目标对象
+目标对象 -> 观察者对象 : 2.通知所有注册的观察者对象进行相应的处理
+activate 观察者对象
+观察者对象 -> 目标对象 : 3.回调目标对象，获取相应的数据
+activate 目标对象
+deactivate 目标对象
+deactivate 观察者对象
+deactivate 目标对象
+@enduml

@@ -10,7 +10,7 @@ interface Observer{
 }
 class ConcreteSubject{
 }
-class ConcreateObserver{
+class ConcreteObserver{
 }
 Subject --> "+subject" Observer:Subject
 Subject <|.. ConcreteSubject
